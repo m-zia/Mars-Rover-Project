@@ -1,4 +1,6 @@
-import { add } from "../src/calc";
+//test file for main.ts
+
+import {add} from "../src/main"
 describe("test add function", () => {
   it("should return 15 for add(10,5)", () => {
     expect(add(10, 5)).toBe(15);

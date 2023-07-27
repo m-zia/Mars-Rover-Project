@@ -1,4 +1,4 @@
-# TypeScript project with Tests
+# Mars Rover Project
 
 This repository can be used as a template for creating a TypeScript project using Jest for testing.
 

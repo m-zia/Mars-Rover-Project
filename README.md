@@ -4,15 +4,5 @@ This repository can be used as a template for creating a TypeScript project usin
 
 ## Instructions
 
-- Click the "Use this template" button
-
-- Click "Create new repository"
-
-- Give your repository a name and click "Create repository from template"
-
-- Clone down your new repository to your computer
-
-- Navigate to the directory on your command line
-
-- Run `npm install` followed by `npm test` to run the tests
+- recall we run TS files in the terminal by doing: npx ts-node src/main.ts
 

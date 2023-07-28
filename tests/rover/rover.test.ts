@@ -1,12 +1,26 @@
-//test file for rover.ts
+//test file for index.ts rover.ts
 
-import {add} from "../../src/rover/rover"
+import {rotateLeft, rotateRight} from "../../src/rover/index"
 
-describe("test add function", () => {
-    it("should return 15 for add(10,5)", () => {
-      expect(add(10, 5)).toBe(15);
-    });
-    it("should return 5 for add(2,3)", () => {
-      expect(add(2, 3)).toBe(5);
+
+describe('Rover Movement', () => {
+  describe('rotateLeft', () => {
+    it('should rotate the direction of the rover to the left', () => {
+      expect(rotateLeft('N')).toBe('W');
+      expect(rotateLeft('W')).toBe('S');
+      expect(rotateLeft('S')).toBe('E');
+      expect(rotateLeft('E')).toBe('N');
     });
   });
+
+  describe('rotateRight', () => {
+    it('should rotate the direction of the rover to the right', () => {
+      expect(rotateRight('N')).toBe('E');
+      expect(rotateRight('E')).toBe('S');
+      expect(rotateRight('S')).toBe('W');
+      expect(rotateRight('W')).toBe('N');
+    });
+  });
+
+
+})

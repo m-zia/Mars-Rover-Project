@@ -1,4 +1,5 @@
 //test file for index.ts rover.ts
+//testing the rotateRight(), rotateLeft() and move() functions for the Rover.
 
 import {rotateLeft, rotateRight, move} from "../../src/rover/index"
 import { Plateau, Rover } from "../../src/types/rover";
@@ -21,7 +22,7 @@ describe('Rover Movement', () => {
       expect(rotateRight('W')).toBe('N');
     });
   });
-  
+
 })
 
 
@@ -294,6 +295,106 @@ describe('Stopping the rover at the boundary when the plateau is 5 ', () => {
     const rover: Rover = { x: 0, y: 0, direction: 'W' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 0, y: 0, direction: 'W' });
+  });
+
+
+  //x=0
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 0, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 0, direction: 'S' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 0, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 0, direction: 'W' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 1, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 1, direction: 'W' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 2, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 2, direction: 'W' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 3, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 3, direction: 'W' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 4, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 4, direction: 'W' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 5, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 5, direction: 'W' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 0, y: 5, direction: 'N' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 5, direction: 'N' });
+  });
+
+
+  //x=5
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 0, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 0, direction: 'S' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 0, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 0, direction: 'E' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 1, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 1, direction: 'E' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 2, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 2, direction: 'E' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 3, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 3, direction: 'E' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 4, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 4, direction: 'E' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 5, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 5, direction: 'E' });
+  });
+
+  it('Rover should stop at the the plateau boundary', () => {
+    const rover: Rover = { x: 5, y: 5, direction: 'N' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 5, direction: 'N' });
   });
 
 })

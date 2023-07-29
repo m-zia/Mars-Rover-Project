@@ -1,4 +1,4 @@
-//test file for main.ts
+// //test file for main.ts
 
 import {add} from "../src/main"
 describe("test add function", () => {

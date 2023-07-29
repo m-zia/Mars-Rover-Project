@@ -1,7 +1,8 @@
-//test file for index.ts rover.ts
+//test file for roverFunctions.ts
+
 //testing the rotateRight(), rotateLeft() and move() functions for the Rover.
 
-import {rotateLeft, rotateRight, move} from "../../src/rover/index"
+import {rotateLeft, rotateRight, move} from "../../src/rover/roverFunctions"
 import { Plateau, Rover } from "../../src/types/rover";
 
 describe('Rover Movement', () => {
@@ -398,6 +399,5 @@ describe('Stopping the rover at the boundary when the plateau is 5 ', () => {
   });
 
 })
-
 
 

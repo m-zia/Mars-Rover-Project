@@ -38,9 +38,24 @@ describe('moving the rover when the plateau is 5 ', () => {
     expect(rover).toEqual({ x: 0, y: 1, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 0, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 0, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 0, y: 1, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 0, y: 2, direction: 'N' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 1, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 1, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 1, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 0, direction: 'S' });
   });
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 0, y: 2, direction: 'N' };
@@ -48,14 +63,54 @@ describe('moving the rover when the plateau is 5 ', () => {
     expect(rover).toEqual({ x: 0, y: 3, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 2, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 2, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 2, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 1, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 0, y: 3, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 0, y: 4, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 3, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 3, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 3, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 2, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 0, y: 4, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 0, y: 5, direction: 'N' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 4, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 4, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 4, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 3, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 5, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 5, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 0, y: 5, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 4, direction: 'S' });
   });
 
   //x=1
@@ -65,24 +120,114 @@ describe('moving the rover when the plateau is 5 ', () => {
     expect(rover).toEqual({ x: 1, y: 1, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 0, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 0, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 0, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 0, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 1, y: 1, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 1, y: 2, direction: 'N' });
   });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 1, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 1, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 1, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 0, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 1, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 1, direction: 'W' });
+  });
+
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 1, y: 2, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 1, y: 3, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 2, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 2, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 2, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 1, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 2, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 2, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 1, y: 3, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 1, y: 4, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 3, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 3, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 3, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 2, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 3, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 3, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 1, y: 4, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 1, y: 5, direction: 'N' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 4, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 4, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 4, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 3, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 4, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 4, direction: 'W' });
+  });
+  
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 5, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 5, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 5, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 4, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 1, y: 5, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 0, y: 5, direction: 'W' });
   });
 
   //x=2
@@ -92,24 +237,114 @@ describe('moving the rover when the plateau is 5 ', () => {
     expect(rover).toEqual({ x: 2, y: 1, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 0, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 0, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 0, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 0, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 2, y: 1, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 2, y: 2, direction: 'N' });
   });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 1, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 1, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 1, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 0, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 1, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 1, direction: 'W' });
+  });
+
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 2, y: 2, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 2, y: 3, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 2, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 2, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 2, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 1, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 2, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 2, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 2, y: 3, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 2, y: 4, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 3, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 3, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 3, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 2, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 3, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 3, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 2, y: 4, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 2, y: 5, direction: 'N' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 4, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 4, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 4, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 3, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 4, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 4, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 5, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 5, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 5, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 4, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 2, y: 5, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 1, y: 5, direction: 'W' });
   });
 
   //x=3
@@ -119,25 +354,116 @@ describe('moving the rover when the plateau is 5 ', () => {
     expect(rover).toEqual({ x: 3, y: 1, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 0, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 0, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 0, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 0, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 3, y: 1, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 3, y: 2, direction: 'N' });
   });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 1, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 1, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 1, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 0, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 1, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 1, direction: 'W' });
+  });
+
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 3, y: 2, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 3, y: 3, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 2, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 2, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 2, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 1, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 2, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 2, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 3, y: 3, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 3, y: 4, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 3, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 3, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 3, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 2, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 3, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 3, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 3, y: 4, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 3, y: 5, direction: 'N' });
   });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 4, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 4, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 4, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 3, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 4, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 4, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 5, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 5, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 5, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 4, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 3, y: 5, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 2, y: 5, direction: 'W' });
+  });
+
 
   //x=4
   it('Rover should move one grid point in the current direction', () => {
@@ -146,25 +472,116 @@ describe('moving the rover when the plateau is 5 ', () => {
     expect(rover).toEqual({ x: 4, y: 1, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 0, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 0, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 0, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 0, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 4, y: 1, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 4, y: 2, direction: 'N' });
   });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 1, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 1, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 1, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 0, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 1, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 1, direction: 'W' });
+  });
+
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 4, y: 2, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 4, y: 3, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 2, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 2, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 2, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 1, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 2, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 2, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 4, y: 3, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 4, y: 4, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 3, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 3, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 3, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 2, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 3, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 3, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 4, y: 4, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 4, y: 5, direction: 'N' });
   });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 4, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 4, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 4, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 3, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 4, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 4, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 5, direction: 'E' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 5, direction: 'E' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 5, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 4, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 4, y: 5, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 3, y: 5, direction: 'W' });
+  });
+
 
   //x=5
   it('Rover should move one grid point in the current direction', () => {
@@ -173,24 +590,83 @@ describe('moving the rover when the plateau is 5 ', () => {
     expect(rover).toEqual({ x: 5, y: 1, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 0, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 0, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 5, y: 1, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 5, y: 2, direction: 'N' });
   });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 1, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 0, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 1, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 1, direction: 'W' });
+  });
+
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 5, y: 2, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 5, y: 3, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 2, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 1, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 2, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 2, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 5, y: 3, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 5, y: 4, direction: 'N' });
   });
   it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 3, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 2, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 3, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 3, direction: 'W' });
+  });
+
+  it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 5, y: 4, direction: 'N' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 5, y: 5, direction: 'N' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 4, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 3, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 4, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 4, direction: 'W' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 5, direction: 'S' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 5, y: 4, direction: 'S' });
+  });
+  it('Rover should move one grid point in the current direction', () => {
+    const rover: Rover = { x: 5, y: 5, direction: 'W' };
+    move(rover, plateau);
+    expect(rover).toEqual({ x: 4, y: 5, direction: 'W' });
   });
 
 });

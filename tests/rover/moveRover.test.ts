@@ -4,14 +4,9 @@ import { moveRover } from "../../src/rover/moveRover"
 import { Plateau, Rover } from "../../src/types/rover";
 
 
-
-//need MORE multiple step tests!!!!
-
-
-describe('Move Rover based on given position and instructions', () => {
+describe('Move Rover in multiple steps based on given position and instructions', () => {
   const plateau: Plateau = { maxX: 5, maxY: 5 };
 
- 
   it('Move the rover multiple steps', () => {
     const rover: Rover = { x: 1, y: 2, direction: 'N' };
     const instructions = 'LMLMLMLMM';
@@ -19,6 +14,33 @@ describe('Move Rover based on given position and instructions', () => {
     expect(finalRover).toEqual({ x: 1, y: 3, direction: 'N' });
   });
 
+  it('Move the rover multiple steps', () => {
+    const rover: Rover = { x: 4, y: 4, direction: 'E' };
+    const instructions = 'RMRMLMMLML';
+    const finalRover = moveRover(plateau, rover, instructions);
+    expect(finalRover).toEqual({ x: 4, y: 1, direction: 'N' });
+  });
+
+  it('Move the rover multiple steps', () => {
+    const rover: Rover = { x: 0, y: 0, direction: 'W' };
+    const instructions = 'RMMMMRMMMMR';
+    const finalRover = moveRover(plateau, rover, instructions);
+    expect(finalRover).toEqual({ x: 4, y: 4, direction: 'S' });
+  });
+
+  it('Move the rover multiple steps', () => {
+    const rover: Rover = { x: 3, y: 3, direction: 'S' };
+    const instructions = 'LLLMMLMRRMMM';
+    const finalRover = moveRover(plateau, rover, instructions);
+    expect(finalRover).toEqual({ x: 1, y: 5, direction: 'N' });
+  });
+
+  it('Move the rover multiple steps', () => {
+    const rover: Rover = { x: 1, y: 5, direction: 'W' };
+    const instructions = 'MLMMMMMLMMMMMLMMMMLMMMLMMLM';
+    const finalRover = moveRover(plateau, rover, instructions);
+    expect(finalRover).toEqual({ x: 3, y: 2, direction: 'E' });
+  });
 
 });
 

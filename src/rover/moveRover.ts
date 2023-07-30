@@ -4,7 +4,7 @@
 import { Direction, Rover, Plateau } from "../types/rover";
 import { rotateLeft, rotateRight, move } from "./roverFunctions";
 
-function moveRover(plateau: Plateau, rover: Rover, instructions: string): Rover {
+export function moveRover(plateau: Plateau, rover: Rover, instructions: string): Rover {
   for (let instr of instructions) {
     if (instr === 'L') {
       // Rotate rover 90 degrees to the left

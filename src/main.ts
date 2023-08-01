@@ -29,13 +29,14 @@ export function processRoverInput(input: string[]): void {
   }
 }
 
-//example input
-// const input: string[] = [
-//   '5 5',
-//   '1 2 N',
-//   'LMLMLMLMM',
-//   '3 3 E',
-//   'MMRMMRMRRM',
-// ];
+//Example of running this main function with an input
 
-// processRoverInput(input);
+const input: string[] = [
+  '5 5',
+  '1 2 N',
+  'LMLMLMLMM',
+  '3 3 E',
+  'MMRMMRMRRM',
+];
+
+processRoverInput(input);

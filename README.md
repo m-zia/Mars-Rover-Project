@@ -32,4 +32,8 @@ Contributions are welcome! If you want to contribute to this project, please fol
 3. Create a pull request, describing the changes you have made.
 
 ## Improvements
-(tbc)
+Future additions to the code could include (but not limited to):
+1. Adjusting the code to handle different shaped plateaus (circular, triangular etc)
+2. Adjust the code to handle vertical changes on the surface of Mars, (this project assumed the surface to be completely smooth without any dips)
+3. Add support for larger vehicles
+4. Factor in obstacles, aliens 👽 etc

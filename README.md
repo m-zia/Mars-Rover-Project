@@ -17,7 +17,7 @@ This TypeScript application allows you to control a Rover's movement on a Platea
 
 ## Usage
 1. Open the terminal and navigate to the project directory.
-2. Open the `main.ts` file, enter your desired path for the Rover and Plateau size inside the `const` variable on line 34
+2. Open the `src/main.ts` file, enter your desired path for the Rover and Plateau size inside the `const` variable on line 34
 3. Run the command `npx ts-node src/main.ts`
 4. The application will output the final position of the Rover on the Plateau to the terminal.
 

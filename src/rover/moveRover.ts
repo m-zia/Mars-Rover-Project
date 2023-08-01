@@ -1,7 +1,5 @@
 //implementing the rover functions
-
-
-import { Direction, Rover, Plateau } from "../types/rover";
+import { Rover, Plateau } from "../types/rover";
 import { rotateLeft, rotateRight, move } from "./roverFunctions";
 
 export function moveRover(plateau: Plateau, rover: Rover, instructions: string): Rover {

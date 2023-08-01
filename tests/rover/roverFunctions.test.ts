@@ -1,8 +1,7 @@
 //test file for roverFunctions.ts
-
 //testing the rotateRight(), rotateLeft() and move() functions for the Rover.
 
-import {rotateLeft, rotateRight, move} from "../../src/rover/roverFunctions"
+import { rotateLeft, rotateRight, move } from "../../src/rover/roverFunctions"
 import { Plateau, Rover } from "../../src/types/rover";
 
 describe('Rover Movement', () => {
@@ -27,10 +26,9 @@ describe('Rover Movement', () => {
 })
 
 
-
 describe('moving the rover when the plateau is 5 ', () => {
   const plateau: Plateau = { maxX: 5, maxY: 5 };
-
+  
   //x=0
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 0, y: 0, direction: 'N' };
@@ -213,7 +211,7 @@ describe('moving the rover when the plateau is 5 ', () => {
     move(rover, plateau);
     expect(rover).toEqual({ x: 0, y: 4, direction: 'W' });
   });
-  
+
   it('Rover should move one grid point in the current direction', () => {
     const rover: Rover = { x: 1, y: 5, direction: 'E' };
     move(rover, plateau);
@@ -755,13 +753,13 @@ describe('Stopping the rover at the boundary when the plateau is 5 ', () => {
     move(rover, plateau);
     expect(rover).toEqual({ x: 2, y: 0, direction: 'S' });
   });
-  
+
   it('Rover should stop at the the plateau boundary', () => {
     const rover: Rover = { x: 1, y: 0, direction: 'S' };
     move(rover, plateau);
     expect(rover).toEqual({ x: 1, y: 0, direction: 'S' });
   });
-  
+
   it('Rover should stop at the the plateau boundary', () => {
     const rover: Rover = { x: 0, y: 0, direction: 'S' };
     move(rover, plateau);

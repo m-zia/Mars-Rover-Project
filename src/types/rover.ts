@@ -1,6 +1,5 @@
 //types for rover/rover.ts
 
-
 export type Direction = 'N' | 'E' | 'S' | 'W';
 
 export interface Rover {

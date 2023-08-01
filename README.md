@@ -9,7 +9,7 @@ This TypeScript application allows you to control a Rover's movement on a Platea
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
-- [Next Steps](#nextsteps)
+- [Improvements](#improvements)
 
 ## Installation
 1. Clone the repository to your local machine.
@@ -32,10 +32,8 @@ Contributions are welcome! If you want to contribute to this project, please fol
 2. Make your changes and test them thoroughly.
 3. Create a pull request, describing the changes you have made.
 
-Please adhere to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) in all your interactions.
-
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
-## Next Steps
+## Improvements
 (tbc)

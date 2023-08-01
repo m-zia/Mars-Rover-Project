@@ -1,7 +1,6 @@
-
 import { Rover, Plateau, Direction } from "./types/index";
 import { moveRover } from "./rover/moveRover";
-
+import { isValidInstruction } from "./validateInstructions";
 
 export function processRoverInput(input: string[]): void {
   const plateauSize: string[] = input[0].split(' ');
@@ -20,17 +19,23 @@ export function processRoverInput(input: string[]): void {
       direction: startPos[2] as Direction,
     };
     const instructions: string = input[i + 1];
+
+    //Check if instructions only contain valid inputs
+    if (!isValidInstruction(instructions)) {
+      throw new Error(`Invalid instructions: ${instructions} \n Instructions can only contain 'L', 'M' or 'R'`);
+    }
+
     rovers.push(moveRover(plateau, rover, instructions));
   }
 
-  // Printing the output
+  //Printing the output
   for (let rover of rovers) {
     console.log(`${rover.x} ${rover.y} ${rover.direction}`);
   }
 }
 
-//Example of running this main function with an input
 
+//Example of running this main function with an input
 const input: string[] = [
   '5 5',
   '1 2 N',
